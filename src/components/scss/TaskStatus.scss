@@ -1,0 +1,54 @@
+.status-dropdown {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.5rem;
+    background-color: #ffffff;
+    padding: 0.9375rem 1.25rem;
+    z-index: 11;
+
+    &::before {
+        content:"";
+        position: absolute;
+        top: -10px;
+        left: 85px;
+        width: rem(25);
+        height: rem(25);
+        background-color: $white;
+        transform: rotate(45deg);
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .status-item {
+        color: $white;
+        border-radius: 0.1875rem;
+        margin: 0.5rem 0.9375rem;
+        height: 2.5rem;
+        width: 140px;
+        line-height: 2.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0px 10px;
+    }
+
+    &-success {
+        background-color: $green-cyan;
+    }
+    &-working {
+        background-color: $neon-carrot;
+    }
+    &-stuck {
+        background-color: $khaki;
+    }
+    &-prepare {
+        background-color: $light-purple ;
+    }
+
+}
